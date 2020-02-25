@@ -10,7 +10,6 @@ class CCalcData:
 
     # 読込
     def read(self, fname=None):
-        # global変数で関数外の変数へアクセスする
         if fname != None:
             self.filename = fname
 
