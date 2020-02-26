@@ -5,6 +5,12 @@
 //! Used files(test.txt) :      Windows 10 Japanese created.
 //!                             UTF-8(Non BOM)
 
+//! The period I spent before I realized this was two days.
+//! The reason why this was troublesome is that if you type L"‚ ‚¢‚¤" directly into the source code and run it,
+//! you can display it in wcout << L"‚ ‚¢‚¤".
+//! This is because if you type it directly,
+//! it will be a three-byte character.(debug watch)
+
 #include <iostream>
 #include <clocale>
 #include <cstdlib>
