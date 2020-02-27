@@ -36,3 +36,22 @@ print("\n--------TIME---------")
 print("--------create time---------")
 tm = time(10, 15, 35, 30)
 print(tm)
+
+print("\n--------TIME Elapsed---------")
+dt1 = date.today()
+dt2 = date(2010, 2, 27)
+result = dt1 - dt2
+print(result)
+
+print("\n--------TIME DELTA---------")
+dt1 = date.today()
+dt2 = dt1 + timedelta(days=1000)
+print(dt2)
+
+dt3 = timedelta(days=1, seconds=20, microseconds=333,\
+  minutes=1, hours=5, weeks=2)
+print(dt3)
+
+
+
+
