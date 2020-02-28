@@ -13,4 +13,6 @@ https://pypi.python.org/pypi
 # ex.) requests
 python -m pip install requests
 
+# ex.) matplotlib
+python -m pip install matplotlib
 
