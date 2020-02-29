@@ -16,3 +16,5 @@ python -m pip install requests
 # ex.) matplotlib
 python -m pip install matplotlib
 
+# ex.) pillow
+python -m pip install pillow
