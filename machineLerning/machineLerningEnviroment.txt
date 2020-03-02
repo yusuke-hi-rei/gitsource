@@ -4,3 +4,15 @@
 # Anaconda
 https://www.anaconda.com/download/
 
+# Start up Anaconda prompt
+# OpenCV
+pip install opencv-python
+
+# TensorFlow
+pip install --upgrade tensorflow==1.5.0
+
+# Keras
+pip install --upgrade keras==2.1.4
+
+
+ 
