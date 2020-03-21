@@ -1,26 +1,55 @@
-- Install
+■ Install
+  - Visual Studio Code
   - Django
 　  https://docs.djangoproject.com/ja/3.0/topics/install/#installing-official-release
-  - Visual Studio Code
-    
-  - python 3.7.6
+  - Python  
+    https://www.python.org/downloads/release/python-373/
 
-  - Django install(3.0.4)
-  / python -m pip install Django
--------------------------------------------------------
->python -m pip install Django
-Collecting Django
-  Downloading Django-3.0.4-py3-none-any.whl (7.5 MB)
-     |????????????????????????????????| 7.5 MB 3.3 MB/s
-Requirement already satisfied: pytz in c:\users\yultu\anaconda3\lib\site-packages (from Django) (2019.3)
-Collecting sqlparse>=0.2.2
-  Downloading sqlparse-0.3.1-py2.py3-none-any.whl (40 kB)
-     |????????????????????????????????| 40 kB 2.6 MB/s
-Collecting asgiref~=3.2
-  Downloading asgiref-3.2.5-py2.py3-none-any.whl (19 kB)
-Installing collected packages: sqlparse, asgiref, Django
-Successfully installed Django-3.0.4 asgiref-3.2.5 sqlparse-0.3.1
-----------------------------------------------------------------
+1) python 3.7.3
+   - Windows x86-64 executable installer
+     ■ Add Python 3.7 to PATH
+
+2) Command prompt
+   python -VER
+
+3) Python の仮想環境
+   python -m venv venv_private_diary
+
+4) Python の仮想環境に入る/でる
+   cd venv_private_diary\Scripts
+   activate.bat
+   deactivate
+
+5) Djangoインストール(仮想環境)
+   activate.bat
+   (venv_private_diary) pip install django==2.2.2
+   
+6) PyCharmインストール(仮想環境)
+   - download pycharm-community
+   https://www.jetbrains.com/ja-jp/pycharm/download/
+    
+7) PostgreSQLインストール(仮想環境)
+   v 10.12
+   https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+8) PostgreSQL環境変数設定
+   - システム環境変数設定
+
+9) データベース作成(仮想環境)
+   (venv_private_diary) psql -U postgres
+   
+   (postgres=#) create database private_diary;
+   
+   データベース一覧: (postgres=#) \l
+   ログアウト: (postgres=#) \q
+
+10) psycopg2 PostgreSQL接続ドライバインストール(仮想環境)
+    (venv_private_diary) pip install psycopg2-binary
+
+
+
+
+
 
 - Django project making.
   / django-admin startproject django_private
