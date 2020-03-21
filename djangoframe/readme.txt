@@ -52,3 +52,6 @@
 12) Djangoアプリケーション作成 (仮想環境)
     cd django_private
 　　(venv_private_diary) python manage.py startapp diary
+
+13) PyCharmからプロジェクトフォルダ（private_diary）を開く
+
