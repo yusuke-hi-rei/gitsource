@@ -46,16 +46,9 @@
 10) psycopg2 PostgreSQL接続ドライバインストール(仮想環境)
     (venv_private_diary) pip install psycopg2-binary
 
+11) Djangoプロジェクト作成 (仮想環境)
+    (venv_private_diary) django-admin startproject private_diary
 
-
-
-
-
-- Django project making.
-  / django-admin startproject django_private
-
-
-- Django application making.
-  / cd django_private
-  / python manage.py startapp django_private01
-
+12) Djangoアプリケーション作成 (仮想環境)
+    cd django_private
+　　(venv_private_diary) python manage.py startapp diary
