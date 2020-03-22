@@ -55,3 +55,8 @@
 
 13) PyCharmからプロジェクトフォルダ（private_diary）を開く
 
+14) Djangoプロジェクトの仮想環境で使用するPythonを設定する。
+　　PyCharm [File]- [settings] [Project Interpreter]
+      [venv_private_diary\Scripts\python.exe]
+
+
