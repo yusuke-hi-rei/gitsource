@@ -66,6 +66,22 @@
       <!-- yusuke-hi-rei update start -->
       {% block header %}{% endblock %}
 
+      {% if messages %}
+      <div class="container">
+        <div class="row">
+          <div class="my-div-style w-100">
+            <ul class="messages" style="list-style: none;">
+              {% for message in messages %}
+              <li {% if message.tags %} class="{{ message.tags}}"{% endif %}>
+                {{ message }}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
       {% block contents %}{% endblock %}
       <!-- yusuke-hi-rei update end -->
 
