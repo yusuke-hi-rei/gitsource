@@ -1,0 +1,85 @@
+<!-- yusuke-hi-rei add start -->
+{% load static %}
+<!-- yusuke-hi-rei add end -->
+<!-- yusuke-hi-rei update start -->
+<html lang="ja">
+<!-- yusuke-hi-rei update end -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- yusuke-hi-rei update start -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- yusuke-hi-rei update end -->
+
+    <!-- Bootstrap core CSS -->
+    <!-- yusuke-hi-rei update start -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- yusuke-hi-rei update end -->
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/one-page-wonder.min.css' %}" rel="stylesheet">
+
+    <!-- yusuke-hi-rei add start -->
+    <!-- My style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    {% block head %}{% endblock %}
+    <!-- yusuke-hi-rei add end -->
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+          <!-- yusuke-hi-rei update start -->
+          <a class="navbar-brand" href="{% url 'diary:index' %}">PRIVATE DIARY</a>
+          <!-- yusuke-hi-rei update end -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <!-- yusuke-hi-rei add start -->
+              <li class="nav-item {% block active_inquiry %}{% endblock %}">
+                <a class="nav-link" href="{% url 'diary:inquiry' %}">INQUIRY</a>
+              </li>
+            </ul>
+            <!-- yusuke-hi-rei add end -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- yusuke-hi-rei update start -->
+      {% block header %}{% endblock %}
+
+      {% block contents %}{% endblock %}
+      <!-- yusuke-hi-rei update end -->
+
+      <!-- Footer -->
+      <footer class="py-5 bg-black">
+        <div class="container">
+          <p class="m-0 text-center text-white small">Copyright &copy; Private Diary 2020</p>
+        </div>
+        <!-- /.container -->
+      </footer>
+
+      <!-- Bootstrap core JavaScript -->
+      <script src="{% static 'vender/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'vender/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    </div>
+  </body>
+</html>
