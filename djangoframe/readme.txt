@@ -1,5 +1,4 @@
 Å° Install
-  - Visual Studio Code
   - Django
 Å@  https://docs.djangoproject.com/ja/3.0/topics/install/#installing-official-release
   - Python  
