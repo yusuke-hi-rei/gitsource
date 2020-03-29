@@ -15,6 +15,7 @@ class IndexView(generic.TemplateView):
     template_name = "index.html"
 
 
+#! 問い合わせ画面ビュー
 class InquiryView(generic.FormView):
     template_name = "inquiry.html"
     form_class = InquiryForm
@@ -27,6 +28,7 @@ class InquiryView(generic.FormView):
         return super().form_valid(form)
 
 
+#! 日記一覧画面ビュー
 class DiaryListView(LoginRequiredMixin, generic.ListView):
     model = Diary
     template_name = 'diary_list.html'
@@ -38,13 +40,14 @@ class DiaryListView(LoginRequiredMixin, generic.ListView):
         return diaries
 
 
+#! 日記詳細画面ビュー
 class DiaryDetailView(LoginRequiredMixin, generic.DetailView):
     model = Diary
     template_name = 'diary_detail.html'
     #! ルーティングの変数名を id に変更する
     #! pk_url_kwarg = 'id'
 
-
+#! 日記作成画面ビュー
 class DiaryCreateView(LoginRequiredMixin, generic.CreateView):
     model = Diary
     template_name = 'diary_create.html'
@@ -60,5 +63,23 @@ class DiaryCreateView(LoginRequiredMixin, generic.CreateView):
 
     def form_invalid(self, form):
         messages.error(self.request, "日記の作成に失敗しました。")
+        return super().form_invalid(form)
+
+
+#! 日記編集画面ビュー
+class DiaryUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Diary
+    template_name = 'diary_update.html'
+    form_class = DiaryCreateForm
+
+    def get_success_url(self):
+        return reverse_lazy('diary:diary_detail', kwargs={'pk': self.kwargs['pk']})
+
+    def form_valid(self, form):
+        messages.success(self.request, '日記を更新しました。')
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "日記の更新に失敗しました。")
         return super().form_invalid(form)
 
